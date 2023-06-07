@@ -30,8 +30,33 @@ products = [
 for p in products:
     print(p["name"], p["price"])
 
+age = 20
+LIMIT = 21
 
+if age > LIMIT:
+    print("good to go")
+else:
+    print("nope")
 
+# AS A FUNCTION
+def getAgeMessage(age):
+    LIMIT = 21
 
+    if age > LIMIT:
+        return "good to go"
+    else:
+        return "nope"
 
+print(getAgeMessage(33))
+print(getAgeMessage(11))
 
+ages = [55,44,11,22,33]
+for a in ages:
+    print(getAgeMessage(a))
+
+# as a function
+def checkEmAll(ages):
+    for a in ages:
+        print(getAgeMessage(a))
+
+checkEmAll([11,11,22,11,22])
